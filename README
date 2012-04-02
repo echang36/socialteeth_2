@@ -2,7 +2,7 @@ THINGS TO DO:
 
 -Shore up validation for user parameters, ad parameters, contribution parameters
 -Before destroy parameters needed for user and ads--make sure no contributions
-
+-Email is case sensitive right now, need to fix this
 
 --
 

@@ -22,8 +22,8 @@
 <p>
 	<b> Contributions: </b>
 	<ul>
-	<% @contributions.each do |a| %>   
-		<li><%=a.ad.title%>: <%=a.amount %></li>
+	<% @contributions.each do |c| %>   
+		<li>  <%= c.ad.title %>: <%=c.amount %></li>
 	<% end %>
 	</ul>
 </p>

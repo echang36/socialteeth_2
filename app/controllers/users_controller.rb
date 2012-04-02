@@ -22,9 +22,7 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
 	
-	total_raised=0
-	@contributions.each {|c| total_raised += c.amount}
-	return total_raised
+
   end
 
   # GET /users/new
