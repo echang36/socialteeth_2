@@ -1,19 +1,22 @@
-<p id="notice"><%= notice %></p>
+
+<h2>   <%= @ad.title %> </h2>
+
 
 <p>
 	<b> Ad ID: </b>
 	<%= @ad.id %>
 
-<p>
-  <b>Title:</b>
-  <%= @ad.title %>
-</p>
+
 
 <p>
   <b>Owner:</b>
 	<%= @ad.user.name %>
 </p>
 
+<p>
+	<b> Watch the ad </b> </br>
+	<%= @res.html.html_safe %>
+</p>
 
 <p>
   <b>Link:</b>

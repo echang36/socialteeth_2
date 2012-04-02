@@ -1,23 +1,33 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<h2>  <%= @user.name %> </h2>
 
 <p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
 
+</br>
+
 <p>
 	<b> Owned Ads: </b>
-	<ul>
-	<% @owned_ads.each do |a| %>   
-		<li><%= a.title%></li>
-	<% end %>
-	</ul>
+	<table>
+		<tr>
+			<th>Ad</th>
+			<th>Amount Raised</th>
+			<th>Fundraising Goal </th>
+		</tr>
+		<% @owned_ads.each do |a| %>   
+			<tr>
+				<td><%= a.title %></td>
+				<td><"Add this functionality"></td>
+				<td><%= a.goal %></td>
+			</tr>
+		<% end %>
+	</table>
 </p>
+
+</br>
+
 
 <p>
 	<b> Contributions: </b>

@@ -18,6 +18,9 @@ class AdsController < ApplicationController
 	@total=0
 	@contributions.each{|c| @total += c.amount}
 	
+	OEmbed::Providers.register_all
+	@res=OEmbed::Providers.get(@ad.link) 
+	
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @ad }

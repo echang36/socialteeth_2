@@ -16,8 +16,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 	@owned_ads = Ad.where(user_id: @user.id)
 	@contributions = Contribution.where(user_id: @user.id)
-	
-    respond_to do |format|
+
+    
+	respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
     end
