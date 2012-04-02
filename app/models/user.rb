@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
 		message: 'Not a valid email address'
 	}
 	
-	has_many :ad
-	has_many :contribution
+	has_many :ads
+	has_many :contributions
 end

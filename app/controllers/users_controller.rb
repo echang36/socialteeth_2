@@ -15,12 +15,16 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 	@owned_ads = Ad.where(user_id: @user.id)
-	
+	@contributions = Contribution.where(user_id: @user.id)
 	
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
     end
+	
+	total_raised=0
+	@contributions.each {|c| total_raised += c.amount}
+	return total_raised
   end
 
   # GET /users/new

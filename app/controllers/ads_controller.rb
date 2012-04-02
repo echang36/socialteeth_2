@@ -14,11 +14,16 @@ class AdsController < ApplicationController
   # GET /ads/1.json
   def show
     @ad = Ad.find(params[:id])
-
+	@contributions = Contribution.where(ad_id: @ad.id)
+	@total=0
+	@contributions.each{|c| @total += c.amount}
+	
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @ad }
     end
+
+
   end
 
   # GET /ads/new

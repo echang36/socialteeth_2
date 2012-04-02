@@ -40,7 +40,13 @@ class ContributionsController < ApplicationController
   # POST /contributions
   # POST /contributions.json
   def create
-    @contribution = Contribution.new(params[:contribution])
+	contributer=User.find_by_email!(params[:contribution][:user])
+	to_ad=Ad.find(params[:contribution][:ad])
+    @contribution = Contribution.new(
+		user: contributer,
+		ad: to_ad,
+		amount: params[:contribution][:amount])
+	
 	
     respond_to do |format|
      if @contribution.save
