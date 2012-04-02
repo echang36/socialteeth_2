@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<b> Ad ID: </b>
+	<%= @ad.id %>
+
+<p>
+  <b>Title:</b>
+  <%= @ad.title %>
+</p>
+
+<p>
+  <b>Owner:</b>
+	<%= @ad.user.name %>
+</p>
+
+
+<p>
+  <b>Link:</b>
+  <%= @ad.link %>
+</p>
+
+
+<p>
+  <b>Desc:</b>
+  <%= @ad.desc %>
+</p>
+
+
+<p>
+  <b>Goal:</b> <%= @ad.goal %>
+  <b> Amount Raised: </b>
+</p>
+
+
+<h6> Contribute </h6>
+<%= render "/contributions/form" %>
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

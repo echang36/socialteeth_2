@@ -1,5 +1,9 @@
 Socialteeth2::Application.routes.draw do
-  resources :users
+
+
+  	  resources :contributions
+	  resources :ads
+	  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
